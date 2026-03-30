@@ -1,7 +1,9 @@
-# Rocket League Replay Restorer (v1.0)
+# Rocket League Replay Restorer (v1.2)
 ### Restoring Legacy Replays (Net 10) for the 2026 Engine (Net 11)
 
-This tool allows you to fix legacy Rocket League replays (recorded before March 2026) that are either invisible in the game menu or show an "Error Occurred" when played.
+> [!IMPORTANT]
+> **ALWAYS BACKUP YOUR REPLAYS BEFORE USE.** 
+> While this tool is designed to be "Surgical" and safe, modifying binary data always carries a risk of file corruption. Copy your legacy `.replay` files to a safe location before running the restoration scripts.
 
 ---
 
