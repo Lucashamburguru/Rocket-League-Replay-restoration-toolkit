@@ -1,0 +1,31 @@
+# Rocket League Replay Restorer - Git Ignore
+
+# Match Data (Huge binary blobs)
+*.replay
+input_replays/
+restored_replays/
+RLreplaysUnedited/
+Restored_Replays_2026/
+test_debug/
+test_debug_v2/
+skeleton/
+
+# Tooling & Repos
+boxcars_repo/
+rrrocket
+
+# Debug & Temporary Files
+*.json
+*.txt
+*.zip
+.placeholder
+
+# Python 
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Operating System Files
+.DS_Store
+Thumbs.db
