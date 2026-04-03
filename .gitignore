@@ -5,20 +5,34 @@
 input_replays/
 restored_replays/
 RLreplaysUnedited/
-Restored_Replays_2026/
-test_debug/
-test_debug_v2/
-skeleton/
+converted/
+Comparison/
 
 # Tooling & Repos
 boxcars_repo/
+rrrocket_repo/
+boxcars/
+rrrocket_src/
+boxbox-encode/
+restorer/
+rattletrap
+rattletrap/
+rattletrap_patched
+rattletrap_patched/
+rattletrap.tar.gz
+rrrocket.tar.gz
 rrrocket
+bin/
+skeleton/
+templates/
 
 # Debug & Temporary Files
 *.json
 *.txt
 *.zip
+*.bin
 .placeholder
+analysis.txt
 
 # Python 
 __pycache__/
@@ -29,3 +43,5 @@ __pycache__/
 # Operating System Files
 .DS_Store
 Thumbs.db
+.crates.toml
+.crates2.json

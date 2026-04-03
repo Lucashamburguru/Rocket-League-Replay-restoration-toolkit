@@ -34,7 +34,10 @@ This tool performs a "Surgical Bit-Shift" on the binary data:
 
 ## **Version History**
 
-### **v1.2 (Latest)**
+### **v1.3 (Latest)**
+- **Legacy Hoops Support**: Added support for pre-2024 Hoops replays. Automatically patches the legacy `GameEvent_Basketball` archetype to `GameInfo_Basketball`, ensuring older replays don't crash the modern engine.
+
+### **v1.2**
 - **Folder Skeleton**: Added empty `input_replays/` and `restored_replays/` folder structures to the toolkit.
 - **Improved Scripting**: Unified the `.bat` and `.sh` scripts to handle the new directory structure.
 

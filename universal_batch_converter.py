@@ -59,18 +59,18 @@ def universal_patch(input_path, output_path):
             candidates = [
                 # (Old Name, New Name) 
                 (b'Archetypes.Ball.Ball_BasketBall_Mutator\x00', b'Archetypes.Ball.ball_luminousairplane\x00'),
-                (b'Archetypes.Ball.Ball_BasketBall\x00', b'Archetypes.Ball.ball_luminousairplane\x00')
+                (b'Archetypes.Ball.Ball_BasketBall\x00', b'Archetypes.Ball.ball_luminousairplane\x00'),
+                (b'Archetypes.GameEvent.GameEvent_Basketball\x00', b'GameInfo_Basketball.GameInfo.GameInfo_Basketball:Archetype\x00')
             ]
             
             for old_name, new_name in candidates:
                 old_token = struct.pack('<i', len(old_name)) + old_name
                 new_token = struct.pack('<i', len(new_name)) + new_name
                 
-                pos_in_body = body_data.find(old_token)
+                pos_in_body = final_body_data.find(old_token)
                 if pos_in_body != -1:
-                    final_body_data = body_data[:pos_in_body] + new_token + body_data[pos_in_body+len(old_token):]
+                    final_body_data = final_body_data[:pos_in_body] + new_token + final_body_data[pos_in_body+len(old_token):]
                     diff = len(new_token) - len(old_token)
-                    break # Only replace the first match (the more specific one)
         
         # 4. Finalize Body
         new_body_size = len(final_body_data)
