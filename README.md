@@ -1,4 +1,4 @@
-# Rocket League Replay Restorer (v1.2)
+# Rocket League Replay Restorer (v1.3)
 ### Restoring Legacy Replays (Net 10) for the 2026 Engine (Net 11)
 
 > [!IMPORTANT]
