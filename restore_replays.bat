@@ -3,8 +3,16 @@ setlocal
 color 0b
 
 echo -------------------------------------------------------------------
-echo     Rocket League Replay Restorer (v1.0) - Windows Version
+echo     Rocket League Replay Restorer (v1.4) - Windows Version
 echo -------------------------------------------------------------------
+echo.
+echo      _
+echo     ( )
+echo    (o o)
+echo    ( v )
+echo   /^|   ^|\
+echo    ^^   ^^
+echo Made by Pengo ^& Gemini
 echo.
 
 :: Check for python3

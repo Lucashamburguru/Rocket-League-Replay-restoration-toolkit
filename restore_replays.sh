@@ -1,5 +1,5 @@
 #!/bin/bash
-# Rocket League Replay Restorer (v1.2) - Linux Version
+# Rocket League Replay Restorer (v1.4) - Linux Version
 
 # Colors
 CYAN='\033[0;36m'
@@ -7,8 +7,16 @@ RED='\033[0;31m'
 NC='\033[0m' # No Color
 
 echo -e "${CYAN}-------------------------------------------------------------------${NC}"
-echo -e "    Rocket League Replay Restorer - Restoration Toolkit"
+echo -e "    Rocket League Replay Restorer (v1.4) - Restoration Toolkit"
 echo -e "${CYAN}-------------------------------------------------------------------${NC}"
+echo ""
+echo "     _ "
+echo "    ( )"
+echo "   (o o)"
+echo "   ( v )"
+echo "  /|   |\\"
+echo "   ^   ^"
+echo "Made by Pengo & Gemini"
 echo ""
 
 # Check for python3
@@ -33,7 +41,7 @@ fi
 
 # Run the latest stable restorer
 echo "Processing replays..."
-python3 universal_v21_batch_restorer.py --input ./input_replays --output ./restored_replays
+python3 universal_batch_converter.py --input ./input_replays --output ./restored_replays
 
 echo ""
 echo "Operation complete."
