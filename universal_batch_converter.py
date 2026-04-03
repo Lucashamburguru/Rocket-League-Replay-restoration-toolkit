@@ -40,8 +40,9 @@ def universal_patch(input_path, output_path):
         # Determine if it's Hoops (Look for specialized basketball archetype or map names)
         is_hoops = b'Archetypes.Ball.Ball_BasketBall' in data or b'HoopsStadium' in data or b'hoopsStreet' in data
         
-        # 2. Update NetVersion in Header (always)
-        struct.pack_into('<I', data, 16, 11)
+        # 2. Preserve original NetVersion to prevent protocol mismatch crashes in older replays (e.g. Net 7)
+        # struct.pack_into('<I', data, 16, 11) # REMOVED: Do not force Net 11!
+        
         h_data_patched = data[8:8+h_sz]
         h_crc = calculate_ue3_crc(h_data_patched)
         struct.pack_into('<I', data, 4, h_crc)

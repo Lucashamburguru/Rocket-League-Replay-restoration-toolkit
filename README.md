@@ -1,5 +1,5 @@
-# Rocket League Replay Restorer (v1.3)
-### Restoring Legacy Replays (Net 10) for the 2026 Engine (Net 11)
+# Rocket League Replay Restorer (v1.4)
+### Restoring Legacy Replays (Net 7+) for the 2026 Engine (Net 11)
 
 > [!IMPORTANT]
 > **ALWAYS BACKUP YOUR REPLAYS BEFORE USE.** 
@@ -34,7 +34,11 @@ This tool performs a "Surgical Bit-Shift" on the binary data:
 
 ## **Version History**
 
-### **v1.3 (Latest)**
+### **v1.4 (Latest)**
+- **Protocol Preservation**: Stopped forcing NetVersion 11 on older replays. The tool now preserves the original NetVersion (e.g., Net 7, Net 10), allowing Rocket League's backward-compatible parsers to load the data correctly without protocol mismatch crashes.
+- **Legacy Map Patching**: Added surgical patches for legacy `HoopsStadium_P` GoalVolumes. Maps old `GoalVolume_TA_2/3` to the modern `GoalVolume_Hoops_TA_0/1` naming scheme while maintaining map integrity.
+
+### **v1.3**
 - **Legacy Hoops Support**: Added support for pre-2024 Hoops replays. Automatically patches the legacy `GameEvent_Basketball` archetype to `GameInfo_Basketball`, ensuring older replays don't crash the modern engine.
 
 ### **v1.2**
