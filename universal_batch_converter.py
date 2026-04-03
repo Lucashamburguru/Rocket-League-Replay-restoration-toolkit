@@ -37,8 +37,8 @@ def universal_patch(input_path, output_path):
         h_sz = struct.unpack('<I', data[0:4])[0]
         h_data = data[8:8+h_sz]
         
-        # Determine if it's Hoops (Look for the specialized basketball archetype)
-        is_hoops = b'Archetypes.Ball.Ball_BasketBall' in data
+        # Determine if it's Hoops (Look for specialized basketball archetype or map names)
+        is_hoops = b'Archetypes.Ball.Ball_BasketBall' in data or b'HoopsStadium' in data or b'hoopsStreet' in data
         
         # 2. Update NetVersion in Header (always)
         struct.pack_into('<I', data, 16, 11)
@@ -60,7 +60,9 @@ def universal_patch(input_path, output_path):
                 # (Old Name, New Name) 
                 (b'Archetypes.Ball.Ball_BasketBall_Mutator\x00', b'Archetypes.Ball.ball_luminousairplane\x00'),
                 (b'Archetypes.Ball.Ball_BasketBall\x00', b'Archetypes.Ball.ball_luminousairplane\x00'),
-                (b'Archetypes.GameEvent.GameEvent_Basketball\x00', b'GameInfo_Basketball.GameInfo.GameInfo_Basketball:Archetype\x00')
+                (b'Archetypes.GameEvent.GameEvent_Basketball\x00', b'GameInfo_Basketball.GameInfo.GameInfo_Basketball:Archetype\x00'),
+                (b'HoopsStadium_P.TheWorld:PersistentLevel.GoalVolume_TA_2.Goal_TA_0\x00', b'hoopsStreet_p.TheWorld:PersistentLevel.GoalVolume_Hoops_TA_0.Goal_Hoops_TA_0\x00'),
+                (b'HoopsStadium_P.TheWorld:PersistentLevel.GoalVolume_TA_3.Goal_TA_0\x00', b'hoopsStreet_p.TheWorld:PersistentLevel.GoalVolume_Hoops_TA_1.Goal_Hoops_TA_0\x00')
             ]
             
             for old_name, new_name in candidates:
