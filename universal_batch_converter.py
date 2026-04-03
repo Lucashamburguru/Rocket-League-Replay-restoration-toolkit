@@ -61,8 +61,8 @@ def universal_patch(input_path, output_path):
                 (b'Archetypes.Ball.Ball_BasketBall_Mutator\x00', b'Archetypes.Ball.ball_luminousairplane\x00'),
                 (b'Archetypes.Ball.Ball_BasketBall\x00', b'Archetypes.Ball.ball_luminousairplane\x00'),
                 (b'Archetypes.GameEvent.GameEvent_Basketball\x00', b'GameInfo_Basketball.GameInfo.GameInfo_Basketball:Archetype\x00'),
-                (b'HoopsStadium_P.TheWorld:PersistentLevel.GoalVolume_TA_2.Goal_TA_0\x00', b'hoopsStreet_p.TheWorld:PersistentLevel.GoalVolume_Hoops_TA_0.Goal_Hoops_TA_0\x00'),
-                (b'HoopsStadium_P.TheWorld:PersistentLevel.GoalVolume_TA_3.Goal_TA_0\x00', b'hoopsStreet_p.TheWorld:PersistentLevel.GoalVolume_Hoops_TA_1.Goal_Hoops_TA_0\x00')
+                (b'HoopsStadium_P.TheWorld:PersistentLevel.GoalVolume_TA_2.Goal_TA_0\x00', b'HoopsStadium_P.TheWorld:PersistentLevel.GoalVolume_Hoops_TA_0.Goal_Hoops_TA_0\x00'),
+                (b'HoopsStadium_P.TheWorld:PersistentLevel.GoalVolume_TA_3.Goal_TA_0\x00', b'HoopsStadium_P.TheWorld:PersistentLevel.GoalVolume_Hoops_TA_1.Goal_Hoops_TA_0\x00')
             ]
             
             for old_name, new_name in candidates:
