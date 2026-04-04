@@ -42,3 +42,16 @@ class ReplayEditor:
         if pos == -1:
             return -1
         return pos
+
+    def update_int_property(self, name, new_value, occurrence=1):
+        pos = self.find_property(name)
+        if pos == -1: return False
+        
+        # Structure: [Name][StrProperty][Size][0][Value]
+        # IntProperty value starts 8 bytes after "IntProperty\0"
+        type_pos = self.data.find(b"IntProperty\x00", pos)
+        if type_pos == -1: return False
+        
+        value_pos = type_pos + 12 + 8 # "IntProperty\0" (12) + metadata (8)
+        struct.pack_into('<I', self.data, value_pos, new_value)
+        return True
