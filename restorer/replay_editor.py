@@ -34,3 +34,11 @@ class ReplayEditor:
             self.data = bytearray(f.read())
         self.header_size = struct.unpack('<I', self.data[0:4])[0]
         return True
+
+    def find_property(self, name):
+        # Rocket League strings in header are [length][string\0]
+        token = struct.pack('<I', len(name) + 1) + name.encode('ascii') + b'\x00'
+        pos = self.data.find(token)
+        if pos == -1:
+            return -1
+        return pos

@@ -10,5 +10,13 @@ class TestReplayEditor(unittest.TestCase):
         self.assertEqual(crc1, crc2)
         self.assertIsInstance(crc1, int)
 
+    def test_find_property(self):
+        editor = ReplayEditor()
+        editor.load('RLreplaysUnedited/oldreplay.replay')
+        pos = editor.find_property("PlayerName")
+        self.assertNotEqual(pos, -1)
+        # Check if the bytes at pos match "PlayerName"
+        self.assertEqual(editor.data[pos+4:pos+4+10], b"PlayerName")
+
 if __name__ == '__main__':
     unittest.main()
