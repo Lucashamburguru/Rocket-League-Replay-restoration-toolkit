@@ -2,8 +2,10 @@
 
 # Match Data (Huge binary blobs)
 *.replay
-input_replays/
-restored_replays/
+input_replays/*
+!input_replays/.gitkeep
+restored_replays/*
+!restored_replays/.gitkeep
 RLreplaysUnedited/
 converted/
 Comparison/
@@ -14,7 +16,6 @@ rrrocket_repo/
 boxcars/
 rrrocket_src/
 boxbox-encode/
-restorer/
 rattletrap
 rattletrap/
 rattletrap_patched
@@ -45,3 +46,4 @@ __pycache__/
 Thumbs.db
 .crates.toml
 .crates2.json
+docs/EPIC_TECHNICAL_REPORT.md
