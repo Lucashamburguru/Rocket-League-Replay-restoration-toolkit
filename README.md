@@ -37,7 +37,7 @@ This tool performs a "Surgical Bit-Shift" on the binary data:
 ### **v1.5 (Latest)**
 - **Ancient Replay Support (Net 0)**: Added support for the earliest 2017-era replays.
 - **Legacy Extension Stripping**: Automatically strips `.upk` file extensions from object names (e.g., `HoopsStadium_P.upk` -> `HoopsStadium_P`), which otherwise cause immediate crashes in the modern engine.
-- **Casing Normalization**: Added support for ancient capitalization variants like `Ball_Basketball` (lowercase 'k').
+- **Casing Normalization**: Added support for ancient capitalization variants like `Ball_Basketball` (lowercase 'b' in the second half).
 
 ### **v1.4**
 - **Protocol Preservation**: Stopped forcing NetVersion 11 on older replays. The tool now preserves the original NetVersion (e.g., Net 7, Net 10), allowing Rocket League's backward-compatible parsers to load the data correctly without protocol mismatch crashes.
