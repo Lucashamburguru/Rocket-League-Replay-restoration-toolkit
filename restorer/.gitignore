@@ -1,7 +1,0 @@
-# Rust
-target/
-
-# Python
-__pycache__/
-*.py[cod]
-*$py.class
